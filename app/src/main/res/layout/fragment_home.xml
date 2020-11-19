@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:id="@+id/scrollView1"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+<com.google.android.material.appbar.AppBarLayout
+    android:id="@+id/appbar1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/constraint1"
+        app:layout_scrollFlags="scroll"
+            android:background="@color/white">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:id="@+id/fm_home_iv1"
+            tools:background="@drawable/newshutdefaultimg"
+            app:layout_constraintTop_toTopOf="parent">
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fm_home_tv1"
+            tools:text="\u0996\u09ac\u09b0"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:background="@color/appgreencolor"
+            android:textAlignment="center"
+            android:paddingTop="2dp"
+            android:paddingBottom="4dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/fm_home_iv1"
+            app:layout_constraintStart_toStartOf="@+id/fm_home_iv1"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="15dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fm_home_tv2"
+            tools:text="By Dibyendu - 30th August, 2019"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:drawableStart="@drawable/ic_profile"
+            android:textAlignment="center"
+            android:paddingTop="2dp"
+            android:paddingBottom="4dp"
+            android:drawablePadding="5dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/fm_home_iv1"
+            app:layout_constraintStart_toStartOf="@+id/fm_home_iv1"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            />
+
+<androidx.recyclerview.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/fm_home_rv1"
+    app:layout_constraintTop_toBottomOf="@+id/fm_home_tv2"
+    android:layout_marginBottom="10dp"
+
+    />
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.appbar.AppBarLayout>
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fm_home_rv2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/rv_progress1"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_marginTop="5dp"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            android:id="@+id/retry_btn"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Loading Failed\nClick here to retry."
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:background="@color/appgreencolor"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:padding="15dp"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+            <com.example.kloadingspin.KLoadingSpin
+                android:id="@+id/KLoadingSpin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:backgroundColor="@color/white"
+                app:primarySpinnerColor="@color/appgreencolor"
+                app:rotationSpeedInMs="1000"
+                app:text="Loading..."
+                app:secondarySpinnerColor="@color/apporangecolor"
+                app:textColor="@color/customcolor2"
+                app:textSize="30" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:id="@+id/rv_progress1"
+            android:visibility="gone"
+            android:layout_marginBottom="160dp"
+            app:layout_constraintTop_toBottomOf="@+id/fm_home_rv2"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            android:background="@color/white">
+
+            <ProgressBar
+                android:theme="@style/ProgressBarColor"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:visibility="gone"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/rvprogressbar"
+                />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="15dp"
+                android:id="@+id/retry_btn_rv"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Loading Failed\nClick here to retry."
+                        android:textAlignment="center"
+                        android:textSize="14sp"
+                        android:background="@color/appgreencolor"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"
+
+                        android:visibility="visible"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="15dp"
+                android:id="@+id/tv_endoffeed"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="You have reached end of this category."
+                        android:textAlignment="center"
+                        android:textSize="14sp"
+                        android:background="@color/appgreencolor"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"
+
+                        android:visibility="visible"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center_horizontal|bottom">
+        </View>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</ScrollView>

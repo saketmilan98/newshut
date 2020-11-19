@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:id="@+id/scrollView1"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/constraint1"
+        android:background="@color/white">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/appbar1"
+            app:layout_constraintTop_toTopOf="parent"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvProfile"
+            android:textSize="24sp"
+            android:text="PROFILE"
+            app:layout_constraintTop_toBottomOf="@+id/appbar1"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/customcolor2"
+            android:layout_marginStart="10dp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tvProfile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:hint="Name"
+            android:textColorHint="@color/appgreencolor"
+            />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_layout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/text_input_layout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:hint="Email Id"
+            android:textColorHint="@color/appgreencolor"
+            />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <EditText
+            android:id="@+id/phoneEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:visibility="gone"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/text_input_layout2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:hint="Phone"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/saveBtn"
+            app:layout_constraintTop_toBottomOf="@+id/phoneEditText"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="EDIT"
+            tools:text="SAVE"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/appgreencolor"
+
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvAbout"
+            android:textSize="24sp"
+            android:text="About"
+            app:layout_constraintTop_toBottomOf="@+id/saveBtn"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/customcolor2"
+            android:layout_marginStart="10dp"
+            />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvContact"
+            android:textSize="20sp"
+            android:text="Contact"
+            app:layout_constraintTop_toBottomOf="@+id/tvAbout"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/appgreencolor"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvContact1"
+            android:textSize="16sp"
+            android:text="info@newshut.co.in"
+            app:layout_constraintTop_toBottomOf="@+id/tvContact"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/apporangecolor"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvCopyright"
+            android:textSize="20sp"
+            android:text="Copyright"
+            app:layout_constraintTop_toBottomOf="@+id/tvContact1"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/appgreencolor"
+            android:layout_marginStart="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvCopyright1"
+            android:textSize="16sp"
+            android:text="Copyright © 2019 Newshut.co.in\nAll rights reserved.\nDeveloped and maintained by Web Hub Solution"
+            app:layout_constraintTop_toBottomOf="@+id/tvCopyright"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/apporangecolor"
+            android:layout_marginStart="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvVersion"
+            android:textSize="20sp"
+            android:text="Build Version"
+            app:layout_constraintTop_toBottomOf="@+id/tvCopyright1"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/appgreencolor"
+            android:layout_marginStart="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvVersion1"
+            android:textSize="16sp"
+            android:text="Version 1.3"
+            app:layout_constraintTop_toBottomOf="@+id/tvVersion"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/apporangecolor"
+            android:layout_marginStart="10dp"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/privacyBtn"
+            android:text="Privacy Policy"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="30dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/appgreencolor"
+            app:layout_constraintTop_toBottomOf="@+id/tvVersion1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="20dp"
+
+
+            />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

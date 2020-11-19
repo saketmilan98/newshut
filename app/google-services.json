@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "108488739917",
+    "firebase_url": "https://newshut-eb551.firebaseio.com",
+    "project_id": "newshut-eb551",
+    "storage_bucket": "newshut-eb551.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:108488739917:android:1ae4b9b04e208824452004",
+        "android_client_info": {
+          "package_name": "com.webhubsolution.newshutnew"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "108488739917-u2renoupunc79sofrmj18uofuq3j4q9u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.webhubsolution.newshutnew",
+            "certificate_hash": "919c9628644503dc489121fe196971750bfb1527"
+          }
+        },
+        {
+          "client_id": "108488739917-el114k25k9maclnuc9qcg3pejvg3ipma.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZlwEcrqo8iGcZqsWAZLoGUl9auS-vBWw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "108488739917-el114k25k9maclnuc9qcg3pejvg3ipma.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
